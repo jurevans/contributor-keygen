@@ -1,0 +1,20 @@
+[package]
+name = "contributor-keygen"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+borsh = "0.9.0"
+tiny-bip39 = "1.0.0"
+namada = { git = "https://github.com/anoma/namada", version = "0.23.0", default-features = false, features = ["abciplus", "namada-sdk"] }
+bip32 = "0.5.1"
+hex = "0.4.3"
+thiserror = "1.0.49"
+ed25519-dalek = {version = "1.0.1", default-features = false, features = ["rand", "u64_backend"]}
+zeroize = "1.6.0"
+
+[patch.crates-io]
+borsh = {git = "https://github.com/heliaxdev/borsh-rs.git", rev = "cd5223e5103c4f139e0c54cf8259b7ec5ec4073a"}
+borsh-derive = {git = "https://github.com/heliaxdev/borsh-rs.git", rev = "cd5223e5103c4f139e0c54cf8259b7ec5ec4073a"}
+borsh-derive-internal = {git = "https://github.com/heliaxdev/borsh-rs.git", rev = "cd5223e5103c4f139e0c54cf8259b7ec5ec4073a"}
+borsh-schema-derive-internal = {git = "https://github.com/heliaxdev/borsh-rs.git", rev = "cd5223e5103c4f139e0c54cf8259b7ec5ec4073a"}
